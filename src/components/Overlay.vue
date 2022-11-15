@@ -1,11 +1,9 @@
 <script setup>
-import { useStore } from '@/stores/store.js'
-import { storeToRefs } from 'pinia'
 
-const store = useStore()
-const { isShowOverlay } = storeToRefs(store)
+defineProps({
+    isShowOverlay: Boolean
+})
 
-store.showOverlay()
 </script>
 <template>
     <Transition>
@@ -16,7 +14,7 @@ store.showOverlay()
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s 0.2s ease;
 }
 
 .v-enter-from,

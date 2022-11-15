@@ -5,8 +5,6 @@ import { ref, onMounted } from 'vue'
 const canvas = ref(null)
 const store = useStore()
 
-store.showLoading()
-
 onMounted(() => {
     const experience = new Experience(canvas.value)
     experience.resources.onReady(() => {

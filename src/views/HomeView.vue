@@ -15,9 +15,9 @@ const { isLoading } = storeToRefs(store)
 
     <ThreeJS />
 
-    <Overlay />
+    <Overlay :isShowOverlay="!isLoading" />
 
-    <Cover />
+    <Cover :isShowCover="!isLoading" />
 
     <Polishing v-show="isLoading" />
 
