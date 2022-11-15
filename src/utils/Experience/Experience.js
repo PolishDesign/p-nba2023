@@ -9,6 +9,7 @@ import Camera from './Camera.js'
 import Renderer from './Renderer.js'
 import Cursor from './Utils/Cursor.js'
 import Resources from './Utils/Resources.js'
+import Environment from './World/Environment.js'
 import PolishMan from './World/PolishMan.js'
 
 let experience = null
@@ -30,19 +31,6 @@ export default class Experience {
     this.renderer = new Renderer()
     this.resources = new Resources(SOURCES)
 
-    // 外面 functions
-    // this.getSchoolLogo = () => {
-    //   throw new Error('getSchoolLogo function must be override')
-    // }
-
-    // this.getRegionNames = () => {
-    //   throw new Error('getRegionNames function must be override')
-    // }
-
-    // this.getSchoolCounts = () => {
-    //   throw new Error('getSchoolCounts function must be override')
-    // }
-
     this.sizes.on('resize', () => {
       this.resize()
     })
@@ -52,7 +40,7 @@ export default class Experience {
     })
 
     this.resources.on('ready', () => {
-
+      this.env = new Environment()
       this.polishMan = new PolishMan()
 
       this.resources.ready()

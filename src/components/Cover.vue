@@ -37,7 +37,7 @@ const expolre = () => {
             </button>
 
             <p class="footer">
-                © Polish Design 磨人設計 x Zeabur <br />雲原生服務部署平台製作
+                © Polish Design 磨人設計 x Zeabur 雲<br />原生服務部署平台製作
             </p>
         </div>
     </Transition>
@@ -60,12 +60,11 @@ const expolre = () => {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -10px;
+    top: -10%;
     z-index: var(--z-index-nba-cover);
 }
 
 .icon-nba-logo-mark {
-    /* margin-bottom: 18%; */
     margin-bottom: 7vh;
 }
 
@@ -77,11 +76,5 @@ const expolre = () => {
     position: fixed;
     bottom: 16px;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .cover-container {
-        top: -10%;
-    }
 }
 </style>
