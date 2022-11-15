@@ -1,12 +1,18 @@
 <script setup>
 import { useStore } from '@/stores/store.js'
+import { onMounted, ref } from 'vue'
 import IconNBALogoMark from "../components/icons/IconNBALogoMark.vue";
 import IconNBALogo from "../components/icons/IconNBALogo.vue";
 
+const isShowCover = ref(false)
 const store = useStore()
 
-defineProps({
-    isShowCover: Boolean
+const init = () => {
+    isShowCover.value = true
+}
+
+onMounted(() => {
+    init()
 })
 
 const expolre = () => {
@@ -40,7 +46,7 @@ const expolre = () => {
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-    transition: opacity 0.6s 0.3s ease;
+    transition: opacity 0.6s 0.28s ease;
 }
 
 .v-enter-from,

@@ -1,7 +1,13 @@
 <script setup>
+import { useStore } from '@/stores/store.js'
+import { storeToRefs } from 'pinia'
+import { onMounted } from 'vue';
 
-defineProps({
-    isShowOverlay: Boolean
+const store = useStore()
+const { isShowOverlay } = storeToRefs(store)
+
+onMounted(() => {
+    store.showOverlay()
 })
 
 </script>
