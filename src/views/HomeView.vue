@@ -1,5 +1,4 @@
 <script setup>
-import Polishing from "@/components/Polishing.vue";
 import ThreeJS from "@/components/ThreeJS.vue";
 import { useStore } from '@/stores/store.js'
 import { storeToRefs } from 'pinia'
@@ -15,11 +14,9 @@ const { isLoading } = storeToRefs(store)
 
     <ThreeJS />
 
-    <Overlay v-if="!isLoading" />
+    <Overlay />
 
-    <Cover v-if="!isLoading" />
-
-    <Polishing v-show="isLoading" />
+    <Cover />
 
   </main>
 </template>
