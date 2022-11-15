@@ -21,23 +21,25 @@ export default class PolishMan extends BaseModel {
 
   setModel() {
     this.model = this.resource.glb.scene
-    // console.log(this.model)
+    console.log(this.model)
 
 
-    // this.mapBakedMaterial = new THREE.MeshBasicMaterial({
-    //   map: this.resource.bakedTexture,
-    //   side: THREE.DoubleSide
-    // })
+    this.mapBakedMaterial = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture,
+      side: THREE.DoubleSide
+    })
 
-    // this.model.traverse((mesh) => {
-    //   if (mesh instanceof THREE.Mesh) {
-    //     mesh.material = this.mapBakedMaterial
-    //   }
-    // })
+    this.model.traverse((mesh) => {
+      if (mesh instanceof THREE.Mesh) {
+        if (mesh.name === 'GROUND') {
+          mesh.material = this.mapBakedMaterial
+        }
+      }
+    })
 
-    this.model.position.x = -23
-    this.model.position.y = -4
-    this.model.position.z = -22
+    this.model.position.x = 4
+    this.model.position.y = -2
+    this.model.position.z = -5.5
 
     this.scene.add(this.model)
   }
