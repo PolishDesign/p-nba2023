@@ -4,7 +4,7 @@ export default [
   {
     name: 'glb',
     type: 'gltfModel',
-    path: `${BASE_URL}models/final.glb`
+    path: `${BASE_URL}models/nba.glb`
   },
   {
     name: 'bakedTexture1',

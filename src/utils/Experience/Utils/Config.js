@@ -15,8 +15,8 @@ export const CONFIG = {
     bottom: 22000,
     maxDistance: 3400,
     minDistance: 100,
-    maxDistanceOnMobile: 40,
-    minDistanceOnMobile: 36
+    maxDistanceOnMobile: 200,
+    minDistanceOnMobile: 50
   },
   'CAMERA': {
     initX: 1,
