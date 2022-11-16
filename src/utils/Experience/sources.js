@@ -4,7 +4,7 @@ export default [
   {
     name: 'glb',
     type: 'gltfModel',
-    path: `${BASE_URL}models/1116.glb`
+    path: `${BASE_URL}models/nba.glb`
   },
   {
     name: 'bakedTexture1',
@@ -14,7 +14,7 @@ export default [
   {
     name: 'bakedTexture2',
     type: 'texture',
-    path: `${BASE_URL}models/BOTT.png`
+    path: `${BASE_URL}models/BOT.png`
   },
   {
     name: 'bakedTexture3',
