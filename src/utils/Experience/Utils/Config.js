@@ -7,8 +7,8 @@ export const REGION = {
 
 export const CONFIG = {
   'CURSOR': {
-    peeking: 0.1,
-    scale: 15,
+    peeking: 0.3,
+    scale: 30,
     left: 22000,
     right: 16000,
     top: 22000,
