@@ -39,16 +39,73 @@ export default class PolishMan extends BaseModel {
       side: THREE.DoubleSide
     })
 
+    this.mapBakedMaterial4 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture4,
+      side: THREE.DoubleSide
+    })
+
+    this.mapBakedMaterial5 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture5,
+      side: THREE.DoubleSide
+    })
+
+    this.mapBakedMaterial6 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture6,
+      side: THREE.DoubleSide
+    })
+
+    this.mapBakedMaterial7 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture7,
+      side: THREE.DoubleSide
+    })
+
+    this.mapBakedMaterial8 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture8,
+      side: THREE.DoubleSide
+    })
+
+    this.mapBakedMaterial9 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture9,
+      side: THREE.DoubleSide
+    })
+
+    console.log(this.resource.bakedTexture10)
+    this.mapBakedMaterial10 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture10,
+      side: THREE.DoubleSide
+    })
+
     this.model.traverse((mesh) => {
       if (mesh instanceof THREE.Mesh) {
         if (mesh.name === 'GROUND') {
           mesh.material = this.mapBakedMaterial1
         }
-        if (mesh.name === 'BOT') {
+        if (mesh.name.startsWith('BOT')) {
           mesh.material = this.mapBakedMaterial2
         }
-        if (mesh.name === 'MID1' || mesh.name === 'MID2' || mesh.name === 'MID3' || mesh.name === 'MID4' || mesh.name === 'MID5') {
+        if (mesh.name.startsWith('MID')) {
           mesh.material = this.mapBakedMaterial3
+        }
+        if (mesh.name.startsWith('CUBE')) {
+          mesh.material = this.mapBakedMaterial4
+        }
+        if (mesh.name.startsWith('F')) {
+          mesh.material = this.mapBakedMaterial5
+        }
+        if (mesh.name.startsWith('LB')) {
+          mesh.material = this.mapBakedMaterial6
+        }
+        if (mesh.name.startsWith('LEFT')) {
+          mesh.material = this.mapBakedMaterial7
+        }
+        if (mesh.name.startsWith('MICC')) {
+          mesh.material = this.mapBakedMaterial8
+        }
+        if (mesh.name.startsWith('SO')) {
+          mesh.material = this.mapBakedMaterial9
+        }
+        if (mesh.name.startsWith('SS')) {
+          mesh.material = this.mapBakedMaterial10
         }
       }
     })
