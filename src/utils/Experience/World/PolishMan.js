@@ -24,15 +24,31 @@ export default class PolishMan extends BaseModel {
     console.log(this.model)
 
 
-    this.mapBakedMaterial = new THREE.MeshBasicMaterial({
-      map: this.resource.bakedTexture,
+    this.mapBakedMaterial1 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture1,
+      side: THREE.DoubleSide
+    })
+
+    this.mapBakedMaterial2 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture2,
+      side: THREE.DoubleSide
+    })
+
+    this.mapBakedMaterial3 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture3,
       side: THREE.DoubleSide
     })
 
     this.model.traverse((mesh) => {
       if (mesh instanceof THREE.Mesh) {
         if (mesh.name === 'GROUND') {
-          mesh.material = this.mapBakedMaterial
+          mesh.material = this.mapBakedMaterial1
+        }
+        if (mesh.name === 'BOT') {
+          mesh.material = this.mapBakedMaterial2
+        }
+        if (mesh.name === 'MID1' || mesh.name === 'MID2' || mesh.name === 'MID3' || mesh.name === 'MID4' || mesh.name === 'MID5') {
+          mesh.material = this.mapBakedMaterial3
         }
       }
     })
