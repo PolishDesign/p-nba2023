@@ -130,9 +130,9 @@ export default class PolishMan extends BaseModel {
       }
     })
 
-    this.model.position.x = 4
-    this.model.position.y = -2
-    this.model.position.z = -5.5
+    this.model.position.x = -4
+    this.model.position.y = -12
+    this.model.position.z = -8
 
     this.scene.add(this.model)
   }
