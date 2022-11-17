@@ -21,11 +21,11 @@ export default [
     type: 'texture',
     path: `${BASE_URL}models/MID01.png`
   },
-  {
-    name: 'bakedTexture4',
-    type: 'texture',
-    path: `${BASE_URL}models/CUBE.png`
-  },
+  // {
+  //   name: 'bakedTexture4',
+  //   type: 'texture',
+  //   path: `${BASE_URL}models/CUBE.png`
+  // },
   {
     name: 'bakedTexture5',
     type: 'texture',
@@ -55,5 +55,20 @@ export default [
     name: 'bakedTexture10',
     type: 'texture',
     path: `${BASE_URL}models/SS.png`
+  },
+  {
+    name: 'bakedTexture11',
+    type: 'texture',
+    path: `${BASE_URL}models/BOXXXXX.png`
+  },
+  // {
+  //   name: 'bakedTexture12',
+  //   type: 'texture',
+  //   path: `${BASE_URL}models/CUBE01.png`
+  // },
+  {
+    name: 'bakedTexture13',
+    type: 'texture',
+    path: `${BASE_URL}models/CUBEEEE.png`
   },
 ]

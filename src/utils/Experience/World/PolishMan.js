@@ -39,10 +39,10 @@ export default class PolishMan extends BaseModel {
       side: THREE.DoubleSide
     })
 
-    this.mapBakedMaterial4 = new THREE.MeshBasicMaterial({
-      map: this.resource.bakedTexture4,
-      side: THREE.DoubleSide
-    })
+    // this.mapBakedMaterial4 = new THREE.MeshBasicMaterial({
+    //   map: this.resource.bakedTexture4,
+    //   side: THREE.DoubleSide
+    // })
 
     this.mapBakedMaterial5 = new THREE.MeshBasicMaterial({
       map: this.resource.bakedTexture5,
@@ -69,9 +69,23 @@ export default class PolishMan extends BaseModel {
       side: THREE.DoubleSide
     })
 
-    console.log(this.resource.bakedTexture10)
     this.mapBakedMaterial10 = new THREE.MeshBasicMaterial({
       map: this.resource.bakedTexture10,
+      side: THREE.DoubleSide
+    })
+
+    this.mapBakedMaterial11 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture11,
+      side: THREE.DoubleSide
+    })
+
+    // this.mapBakedMaterial12 = new THREE.MeshBasicMaterial({
+    //   map: this.resource.bakedTexture12,
+    //   side: THREE.DoubleSide
+    // })
+
+    this.mapBakedMaterial13 = new THREE.MeshBasicMaterial({
+      map: this.resource.bakedTexture13,
       side: THREE.DoubleSide
     })
 
@@ -86,9 +100,9 @@ export default class PolishMan extends BaseModel {
         if (mesh.name.startsWith('MID')) {
           mesh.material = this.mapBakedMaterial3
         }
-        if (mesh.name.startsWith('CUBE')) {
-          mesh.material = this.mapBakedMaterial4
-        }
+        // // if (mesh.name.startsWith('CUBE')) {
+        // //   mesh.material = this.mapBakedMaterial4
+        // // }
         if (mesh.name.startsWith('F')) {
           mesh.material = this.mapBakedMaterial5
         }
@@ -106,6 +120,12 @@ export default class PolishMan extends BaseModel {
         }
         if (mesh.name.startsWith('SS')) {
           mesh.material = this.mapBakedMaterial10
+        }
+        if (mesh.name.startsWith('BOX')) {
+          mesh.material = this.mapBakedMaterial11
+        }
+        if (mesh.name.startsWith('CUBE')) {
+          mesh.material = this.mapBakedMaterial13
         }
       }
     })
